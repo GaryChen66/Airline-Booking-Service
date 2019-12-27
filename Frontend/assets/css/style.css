@@ -1,0 +1,814 @@
+body{
+    background:#e7f2f3;
+    position:relative;
+   /* padding-left:250px;
+    padding-bottom:40px;*/
+    overflow-x: hidden;
+}
+#header{
+    width:100%;
+    height:90px;
+    z-index:2500;
+    padding-left:120px;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0, 0, 0, 0.8);
+    color: #e7f2f3;
+}
+#logo{
+    position:absolute;
+    height:70px;
+    left:25px;
+    top:10px;
+    cursor:pointer;
+}
+
+#sendComplain{
+    margin: 5px;
+}
+
+.row, #header{
+    min-width: 440px;
+}
+
+.header-phones{
+    font-size:14px;
+    color: #e7f2f3;
+    margin-right: 13.5%;
+}
+.header-item{
+    margin-right:13.5%;
+    color:#e7f2f3;
+    font-size:18px;
+    background: Transparent no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    border-radius:6px;
+}
+.header-item:hover{
+    transition: background-color 0.3s;
+    background-color:rgba(200, 200, 200, 0.2);
+}
+
+#slider{
+    margin-top: 90px;
+    padding-top: 2px;
+}
+
+
+.close{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.container{
+    width:100%;
+    padding: 0;
+}
+.item{
+    position:relative;
+    background: gray;
+}
+.left-panel{
+    padding-top: 10px;
+    left: 0;
+    top: 90px;
+    position: fixed;
+    z-index: 2000;
+    width: 250px;
+    height: 100%;
+    background: #e7f2f3;
+    overflow-x: hidden;
+    padding-right: 2%;
+    margin-right: 2%;
+}
+.right-column {
+    padding-left: 250px;
+    padding-right: 0;
+}
+.menu-level{
+    margin-left: 10px;
+}
+.menu-item{
+    margin-left: 10px;
+    display: block;
+    max-width:150px;
+}
+
+.contentImage{
+    display:block;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+#book{
+    height:90%;
+
+}
+#plane{
+    z-index:10000;
+    margin-bottom:10px;
+    margin-left: 5%;
+    width:90%;
+    height:58%;
+    border-radius:6px;
+    border:solid 1px darkgray;
+
+}
+
+.option{
+    width:100%;
+    position:relative;
+
+}
+.primary{
+    height:400px;
+    background-image: url(../images/tr11.png);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+
+.bblock{
+    left:0;
+    right:0;
+    margin:auto;
+    padding-left:0!important;
+}
+
+.secondary{
+    height:250px;
+    background-image: url(../images/tr2.png);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+.complain{
+    height:250px;
+    background-image: url(../images/tr4.png);
+    margin-top: 20px;
+    margin-bottom:40px;
+    border-radius: 15px;
+}
+.primary .contentImage{
+    height:160px;
+    top:30px;
+}
+
+.primary .text{
+    width:65%;
+    top:20%;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.secondary .text{
+    width:85%;
+    top:20%;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.complain .text{
+    width:85%;
+    top:20%;
+    padding-bottom: 5px;
+    font-size: 22px;
+}
+
+#complain{
+     min-width: 440px;
+ }
+
+.text{
+    background: rgba(255, 255, 255, 0.7);
+    border-radius:6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position:absolute;
+    font-weight: 400;
+    left:0;
+    right:0;
+    margin: auto auto 5%;
+    padding-bottom: 30px;
+}
+#oBook, #oPhone, #oComplain{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    right:0;
+    margin:auto;
+    width:auto;
+}
+#oBook{
+    width:300px;
+}
+#oPhone{
+    width:180px;
+}
+#oComplain{
+    width:180px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    right: 0;
+    left: 250px;
+    color: darkgray;
+    text-align: center;
+    padding-bottom: 20px;
+    z-index: 100;
+}
+
+#complaint{
+    font-weight:200;
+    font-size:17px;
+}
+
+#background{
+    position:fixed;
+    display: none;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 2800;
+    background: rgba(0, 0, 0, 0.8);
+}
+.widget{
+    background:white;
+    z-index:2900;
+    padding: 50px 20px 20px;
+    border-radius:6px;
+    display: none;
+    position:fixed;
+    width:40%;
+    height:80%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    opacity:0;
+    transition: opacity 0.3s ease-in;
+    min-width: 440px;
+    min-height: 412px;
+}
+.description {
+    position: absolute;
+    font-weight: 500;
+    left: 8%;
+    bottom: 20%;
+    color: white;
+    font-size: 60px;
+    font-family: "Monotype Corsiva", serif;
+}
+.enabled{
+    opacity: 1;
+}
+.widget form{
+    width:90%;
+    margin-left: 5%;
+}
+.widget form label{
+    display:block;
+}
+form{
+    margin-top:-1.5%;
+}
+.widget form input, select{
+    font-weight:300;
+    display:flex;
+    flex-direction:row;
+    margin-left:10px;
+}
+.sum{
+    position:absolute;
+    bottom:10.2%;
+    right:10%;
+    width:10%;
+}
+.finished{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    width:100px;
+}
+
+#googleMap{
+    position:relative;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom:2.5%;
+    height: 50%;
+    transition: all 0s;
+}
+.blocks1{
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+    margin-left:0!important;
+    margin-right: 0!important;
+}
+.blocks2{
+    padding-left: 5%!important;
+    padding-right: 5%!important;
+    margin-left:0!important;
+    margin-right: 0!important;
+}
+
+@media(max-height: 850px){
+    input, label, .widget p, .finished, .sum{
+        font-size:12px;
+    }
+
+    #complaint{
+        font-size:13px;
+    }
+
+    .finished{
+        width:80px;
+    }
+}
+
+@media(max-height: 750px){
+    input, label, .widget p, .finished, .sum{
+        font-size:10px;
+    }
+
+    form{
+        margin-top:-2%;
+    }
+    #complaint{
+         font-size:12px;
+     }
+
+    .finished{
+        width:60px;
+    }
+
+    .left-panel{
+        font-size:12px;
+    }
+    .sum h3{
+        font-size:20px;
+    }
+}
+
+@media(max-height: 650px){
+    input, label, .widget p, .finished, .sum{
+        font-size:8px;
+    }
+    form{
+        margin-top:-2.8%;
+    }
+    #complaint{
+        font-size:11px;
+    }
+    .finished{
+        width:40px;
+    }
+    .left-panel{
+        font-size:11px;
+    }
+    .sum h3{
+        font-size:16px;
+    }
+}
+
+@media(max-height: 550px){
+    input, label, .widget p, .finished, .sum{
+        font-size:6px;
+    }
+    form{
+        margin-top:-3%;
+    }
+    .sum h3{
+        font-size:14px;
+    }
+    #complaint{
+        font-size:8px;
+    }
+    .left-panel{
+        font-size:10px;
+    }
+}
+
+@media(max-height: 450px){
+    input, label, .widget p, .finished, .sum{
+        font-size:4px;
+    }
+    .finished{
+        width:10px;
+    }
+}
+
+@media (max-width: 1680px) {
+    .primary{
+        height:350px;
+    }
+    .secondary{
+        height:250px;
+    }
+    .complain{
+        height:250px;
+    }
+    .primary .contentImage{
+        height:110px;
+    }
+    .primary .text{
+        top:20%;
+        font-size: 18px;
+    }
+    .secondary .contentImage{
+        height:70px;
+        top:30px;
+    }
+    .secondary .text{
+        top:15%;
+        font-size: 16px;
+    }
+
+    .complain .text{
+        top:15%;
+        font-size: 16px;
+    }
+
+    #oBook{
+        width:280px;
+        font-size: 16px;
+        margin-top: 5%;
+    }
+    #oPhone{
+        width:170px;
+        font-size: 14px;
+        margin-top: 7%;
+    }
+    #oComplain{
+        width:170px;
+        font-size: 14px;
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 1625px) {
+    .header-item{
+        margin-right:10.5%;
+    }
+    .gallery-item img{
+        height:100px;
+    }
+    .gallery-item p{
+        max-width:100px;
+        font-size:11px;
+    }
+    #complaint{
+        font-size:15px;
+    }
+    .primary{
+        height:350px;
+    }
+    .secondary{
+        height:250px;
+    }
+    .complain{
+        height:250px;
+    }
+
+    .primary .text{
+        top:10%;
+        font-size: 18px;
+    }
+
+    .secondary .text{
+        top:10%;
+        font-size: 16px;
+    }
+
+    .complain .text{
+        top:10%;
+        font-size: 16px;
+    }
+
+    textarea{
+        font-size: 7px;
+    }
+
+    #oBook{
+        width:280px;
+        font-size: 16px;
+    }
+    #oPhone{
+        width:170px;
+        font-size: 14px;
+    }
+    #oComplain{
+        width:170px;
+        font-size: 12px;
+    }
+
+    .description{
+        font-size: 50px;
+    }
+}
+@media (max-width: 1420px){
+    #complaint{
+        font-size:13px;
+    }
+
+    textarea{
+        font-size: 7px;
+    }
+}
+@media (max-width: 1225px) {
+    .header-item{
+        font-size: 16px;
+        margin-right:8.5%;
+    }
+    .gallery-item img{
+        height:75px;
+    }
+    .gallery-item p{
+        max-width:75px;
+        font-size:9px;
+    }
+    #complaint{
+        font-size:12px;
+    }
+    .primary{
+        height:300px;
+    }
+    .secondary{
+        height:210px;
+    }
+    .complain{
+        height:210px;
+    }
+    .primary .contentImage{
+        height:80px;
+    }
+    .primary .text{
+        top:10%;
+        font-size: 16px;
+    }
+    .secondary .contentImage{
+        height:40px;
+        top:10px;
+    }
+    .secondary .text{
+        top:10%;
+        font-size: 14px;
+    }
+    .complain .contentImage{
+        height:30px;
+        top:20px;
+    }
+    .complain .text{
+        top:10%;
+        font-size:14px;
+
+    }
+
+    #oBook{
+        width:250px;
+        font-size: 14px;
+    }
+    #oPhone{
+        width:150px;
+        font-size: 12px;
+    }
+    #oComplain{
+        width:150px;
+        font-size: 12px;
+    }
+
+    /*.description{
+        font-size: 30px;
+    }*/
+    .description{
+        font-size: 24px;
+    }
+}
+@media(max-width: 1050px){
+    #complaint{
+        font-size:9px;
+    }
+}
+@media (max-width: 1000px) {
+    .header-item{
+        font-size: 14px;
+        margin-right:6.5%;
+    }
+
+    .primary .contentImage{
+        top:5px;
+    }
+
+    .primary .text{
+        top:10%;
+        font-size: 15px;
+    }
+
+    .secondary .text{
+        top:10%;
+        font-size: 12px;
+    }
+
+    .complain .contentImage{
+        top:10px;
+    }
+
+    .complain .text{
+        top:10%;
+        font-size: 12px;
+    }
+
+    textarea{
+        font-size: 8px;
+
+    }
+    .description{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    #content {
+        width: 87%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+    textarea{
+        font-size: 7px;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .primary .text{
+        top:10%;
+        font-size: 14px;
+    }
+
+    .secondary .text{
+        top:10%;
+        font-size: 12px;
+    }
+
+    .complain .text{
+        top:10%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 815px) {
+    .header-item{
+        font-size: 12px;
+        margin-right:3.5%;
+    }
+    .description{
+        font-size: 17px;
+    }
+    #complaint{
+        font-size:6px;
+    }
+    .primary .text{
+        top:10%;
+        font-size: 12px;
+    }
+
+    .secondary .text{
+        top:10%;
+        font-size: 10px;
+    }
+
+    .complain .text{
+        top:10%;
+        font-size: 10px;
+    }
+    #content {
+        margin-left: 2%;
+        margin-right: 2%;
+        width: 100%;
+    }
+    .widget{
+        width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .header-phones{
+        display: none;
+    }
+    .header-item{
+        font-size: 15px;
+        margin-right:4.5%;
+        margin-top: 20px;
+    }
+
+    .left-panel {
+        display: none;
+    }
+    .blocks1{
+        padding-left: 10%!important;
+    }
+    .right-column{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #footer{
+        left:0;
+
+    }
+
+
+    #content {
+        margin-left: 0;
+    }
+    .description{
+        font-size: 20px;
+    }
+    .widget{
+        width: 60%;
+    }
+
+    .primary .text{
+        top:10%;
+        font-size: 13px;
+    }
+
+    .secondary .text{
+        top:5%;
+        font-size: 11px;
+    }
+
+    .complain .text{
+        top:5%;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-item{
+        font-size: 12px;
+        margin-right:2.5%;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+    .widget{
+        width: 75%;
+    }
+
+    .primary .text{
+        top:10%;
+        font-size: 14px;
+    }
+
+    .secondary .text{
+        top:5%;
+        font-size: 12px;
+    }
+
+    .complain .text{
+        top:5%;
+        font-size: 12px;
+    }
+    textarea{
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 440px) {
+   .row{
+        overflow-x: hidden;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .widget{
+        width: 80%;
+    }
+
+    .primary .text{
+        top:10%;
+        font-size: 12px;
+    }
+
+    .secondary .text{
+        top:5%;
+        font-size: 10px;
+    }
+
+    .complain .text{
+        top:5%;
+        font-size: 10px;
+    }
+}
